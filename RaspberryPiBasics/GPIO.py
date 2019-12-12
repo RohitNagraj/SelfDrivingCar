@@ -35,11 +35,11 @@ class Car:
         gpio.output(self.M22, False)
         print("Right")
 
-        time.sleep(0.3)
-        gpio.output(self.M11, False)
-        gpio.output(self.M12, False)
-        gpio.output(self.M21, False)
-        gpio.output(self.M22, False)
+        # time.sleep(0.3)
+        # gpio.output(self.M11, False)
+        # gpio.output(self.M12, False)
+        # gpio.output(self.M21, False)
+        # gpio.output(self.M22, False)
 
     def left(self):
         gpio.output(self.M11, False)
@@ -48,11 +48,11 @@ class Car:
         gpio.output(self.M22, True)
         print("Left")
 
-        time.sleep(0.3)
-        gpio.output(self.M11, False)
-        gpio.output(self.M12, False)
-        gpio.output(self.M21, False)
-        gpio.output(self.M22, False)
+        # time.sleep(0.3)
+        # gpio.output(self.M11, False)
+        # gpio.output(self.M12, False)
+        # gpio.output(self.M21, False)
+        # gpio.output(self.M22, False)
 
     def forward(self):
         gpio.output(self.M11, True)
@@ -61,11 +61,11 @@ class Car:
         gpio.output(self.M22, True)
         print("Forward")
 
-        time.sleep(0.3)
-        gpio.output(self.M11, False)
-        gpio.output(self.M12, False)
-        gpio.output(self.M21, False)
-        gpio.output(self.M22, False)
+        # time.sleep(0.3)
+        # gpio.output(self.M11, False)
+        # gpio.output(self.M12, False)
+        # gpio.output(self.M21, False)
+        # gpio.output(self.M22, False)
 
     def reverse(self):
         gpio.output(self.M11, False)
@@ -74,11 +74,11 @@ class Car:
         gpio.output(self.M22, False)
         print("Reverse")
 
-        time.sleep(0.3)
-        gpio.output(self.M11, False)
-        gpio.output(self.M12, False)
-        gpio.output(self.M21, False)
-        gpio.output(self.M22, False)
+        # time.sleep(0.3)
+        # gpio.output(self.M11, False)
+        # gpio.output(self.M12, False)
+        # gpio.output(self.M21, False)
+        # gpio.output(self.M22, False)
 
     # def getch(self):
     #     fd = sys.stdin.fileno()
