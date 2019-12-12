@@ -25,11 +25,37 @@ class Car:
         gpio.setup(self.M21, gpio.OUT)
         gpio.setup(self.M22, gpio.OUT)
 
-    def forward(self):
+    def rohit(self):
         gpio.output(self.M11, True)
         gpio.output(self.M12, False)
         gpio.output(self.M21, True)
         gpio.output(self.M22, False)
+        print("Right")
+
+        time.sleep(0.3)
+        gpio.output(self.M11, False)
+        gpio.output(self.M12, False)
+        gpio.output(self.M21, False)
+        gpio.output(self.M22, False)
+
+    def left(self):
+        gpio.output(self.M11, False)
+        gpio.output(self.M12, True)
+        gpio.output(self.M21, False)
+        gpio.output(self.M22, True)
+        print("Left")
+
+        time.sleep(0.3)
+        gpio.output(self.M11, False)
+        gpio.output(self.M12, False)
+        gpio.output(self.M21, False)
+        gpio.output(self.M22, False)
+
+    def forward(self):
+        gpio.output(self.M11, True)
+        gpio.output(self.M12, False)
+        gpio.output(self.M21, False)
+        gpio.output(self.M22, True)
         print("Forward")
 
         time.sleep(0.3)
@@ -41,35 +67,9 @@ class Car:
     def reverse(self):
         gpio.output(self.M11, False)
         gpio.output(self.M12, True)
-        gpio.output(self.M21, False)
-        gpio.output(self.M22, True)
-        print("Reverse")
-
-        time.sleep(0.3)
-        gpio.output(self.M11, False)
-        gpio.output(self.M12, False)
-        gpio.output(self.M21, False)
-        gpio.output(self.M22, False)
-
-    def left(self):
-        gpio.output(self.M11, True)
-        gpio.output(self.M12, False)
-        gpio.output(self.M21, False)
-        gpio.output(self.M22, False)
-        print("Left")
-
-        time.sleep(0.3)
-        gpio.output(self.M11, False)
-        gpio.output(self.M12, False)
-        gpio.output(self.M21, False)
-        gpio.output(self.M22, False)
-
-    def right(self):
-        gpio.output(self.M11, False)
-        gpio.output(self.M12, False)
         gpio.output(self.M21, True)
         gpio.output(self.M22, False)
-        print("Right")
+        print("Reverse")
 
         time.sleep(0.3)
         gpio.output(self.M11, False)
@@ -94,6 +94,12 @@ class Car:
         elif key == Key.down:
             print("Reverse")
             self.reverse()
+        elif key == Key.left:
+            print('Left')
+            self.left()
+        elif key == Key.right:
+            print('Right')
+            self.right()
 
     def on_release(self, key):
         if key == Key.esc:
