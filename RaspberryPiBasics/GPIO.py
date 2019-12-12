@@ -1,6 +1,8 @@
+from gpiozero import Robot
 from pynput.keyboard import Key, Listener
 import RPi.GPIO as gpio
 from picamera import PiCamera
+import curses
 import sys
 import termios
 import keyboard
