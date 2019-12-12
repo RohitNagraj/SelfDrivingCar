@@ -105,11 +105,7 @@ class Car:
             self.forward()
         elif key == Key.down:
             print("Reverse")
-            self.path = '/home/pi/Documents/images/image_' + \
-                str(self.i) + '.jpg'
-            self.camera.capture(self.path)
-            self.i += 1
-            self.writer.writerow((self.path, 1))
+
             self.reset()
         elif key == Key.left:
             print('Left')
