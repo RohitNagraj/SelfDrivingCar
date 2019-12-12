@@ -25,6 +25,9 @@ class Car:
         gpio.setup(self.M21, gpio.OUT)
         gpio.setup(self.M22, gpio.OUT)
 
+        self.file = open('data.csv', 'w', newline='')
+        self.writer = csv.writer(file)
+
     def right(self):
         gpio.output(self.M11, True)
         gpio.output(self.M12, False)
@@ -88,17 +91,38 @@ class Car:
     #     return ch
 
     def on_press(self, key):
+
         if key == Key.up:
             print("Forward")
+            self.path = '/home/pi/Documents/images/image_' + \
+                str(self.i) + '.jpg'
+            self.camera.capture(path)
+            self.i += 1
+            self.writer.writerow((path, 0))
             self.forward()
         elif key == Key.down:
             print("Reverse")
+            self.path = '/home/pi/Documents/images/image_' + \
+                str(self.i) + '.jpg'
+            self.camera.capture(path)
+            self.i += 1
+            self.writer.writerow((path, 1))
             self.reverse()
         elif key == Key.left:
             print('Left')
+            self.path = '/home/pi/Documents/images/image_' + \
+                str(self.i) + '.jpg'
+            self.camera.capture(path)
+            self.i += 1
+            self.writer.writerow((path, 2))
             self.left()
         elif key == Key.right:
             print('Right')
+            self.path = '/home/pi/Documents/images/image_' + \
+                str(self.i) + '.jpg'
+            self.camera.capture(path)
+            self.i += 1
+            self.writer.writerow((path, 3))
             self.right()
 
     def on_release(self, key):
