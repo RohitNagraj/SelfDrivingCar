@@ -62,6 +62,7 @@ class Car:
         print("Forward")
 
     def reset(self):
+        time.sleep(0.1)
         gpio.output(self.M11, False)
         gpio.output(self.M12, False)
         gpio.output(self.M21, False)
