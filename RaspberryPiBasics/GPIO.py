@@ -25,7 +25,7 @@ class Car:
         gpio.setup(self.M21, gpio.OUT)
         gpio.setup(self.M22, gpio.OUT)
 
-    def rohit(self):
+    def right(self):
         gpio.output(self.M11, True)
         gpio.output(self.M12, False)
         gpio.output(self.M21, True)
