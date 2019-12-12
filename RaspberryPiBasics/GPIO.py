@@ -124,6 +124,9 @@ class Car:
             self.writer.writerow((self.path, 3))
             self.right()
 
+        elif key == Key.e:
+            self.file.close()
+
     def on_release(self, key):
         pass
 
