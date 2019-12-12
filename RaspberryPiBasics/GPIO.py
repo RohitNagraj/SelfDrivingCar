@@ -33,7 +33,7 @@ class Car:
     def right(self):
         gpio.output(self.M11, True)
         gpio.output(self.M12, False)
-        gpio.output(self.M21, True)
+        gpio.output(self.M21, False)
         gpio.output(self.M22, False)
         print("Right")
 
@@ -45,7 +45,7 @@ class Car:
 
     def left(self):
         gpio.output(self.M11, False)
-        gpio.output(self.M12, True)
+        gpio.output(self.M12, False)
         gpio.output(self.M21, False)
         gpio.output(self.M22, True)
         print("Left")
