@@ -124,12 +124,12 @@ class Car:
             self.i += 1
             self.writer.writerow((self.path, 3))
             self.right()
-        else:
-            self.reset()
 
     def on_release(self, key):
         if key == Key.esc:
             return False
+        else:
+            self.reset()
 
 
 if __name__ == '__main__':
