@@ -26,7 +26,7 @@ class Car:
         gpio.setup(self.M22, gpio.OUT)
 
         self.file = open('data.csv', 'w', newline='')
-        self.writer = csv.writer(file)
+        self.writer = csv.writer(self.file)
 
     def right(self):
         gpio.output(self.M11, True)
