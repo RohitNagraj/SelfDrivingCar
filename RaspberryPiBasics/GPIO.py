@@ -110,7 +110,7 @@ class Car:
             self.camera.capture(self.path)
             self.i += 1
             self.writer.writerow((self.path, 1))
-            self.reverse()
+            self.reset()
         elif key == Key.left:
             print('Left')
             self.path = '/home/pi/Documents/images/image_' + \
