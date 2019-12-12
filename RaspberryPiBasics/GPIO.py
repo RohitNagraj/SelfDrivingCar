@@ -127,8 +127,7 @@ class Car:
             self.right()
 
     def on_release(self, key):
-        if key == Key.up or key == Key.down or key == Key.left or key == Key.right:
-            self.reset()
+        pass
 
 
 if __name__ == '__main__':
