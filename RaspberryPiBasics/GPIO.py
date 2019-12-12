@@ -96,33 +96,33 @@ class Car:
             print("Forward")
             self.path = '/home/pi/Documents/images/image_' + \
                 str(self.i) + '.jpg'
-            self.camera.capture(path)
+            self.camera.capture(self.path)
             self.i += 1
-            self.writer.writerow((path, 0))
+            self.writer.writerow((self.path, 0))
             self.forward()
         elif key == Key.down:
             print("Reverse")
             self.path = '/home/pi/Documents/images/image_' + \
                 str(self.i) + '.jpg'
-            self.camera.capture(path)
+            self.camera.capture(self.path)
             self.i += 1
-            self.writer.writerow((path, 1))
+            self.writer.writerow((self.path, 1))
             self.reverse()
         elif key == Key.left:
             print('Left')
             self.path = '/home/pi/Documents/images/image_' + \
                 str(self.i) + '.jpg'
-            self.camera.capture(path)
+            self.camera.capture(self.path)
             self.i += 1
-            self.writer.writerow((path, 2))
+            self.writer.writerow((self.path, 2))
             self.left()
         elif key == Key.right:
             print('Right')
             self.path = '/home/pi/Documents/images/image_' + \
                 str(self.i) + '.jpg'
-            self.camera.capture(path)
+            self.camera.capture(self.path)
             self.i += 1
-            self.writer.writerow((path, 3))
+            self.writer.writerow((self.path, 3))
             self.right()
 
     def on_release(self, key):
