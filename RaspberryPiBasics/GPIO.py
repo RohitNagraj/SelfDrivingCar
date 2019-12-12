@@ -61,11 +61,11 @@ class Car:
         gpio.output(self.M22, True)
         print("Forward")
 
-        # time.sleep(0.3)
-        # gpio.output(self.M11, False)
-        # gpio.output(self.M12, False)
-        # gpio.output(self.M21, False)
-        # gpio.output(self.M22, False)
+    def reset(self):
+        gpio.output(self.M11, False)
+        gpio.output(self.M12, False)
+        gpio.output(self.M21, False)
+        gpio.output(self.M22, False)
 
     def reverse(self):
         gpio.output(self.M11, False)
@@ -124,6 +124,8 @@ class Car:
             self.i += 1
             self.writer.writerow((self.path, 3))
             self.right()
+        else:
+            self.reset()
 
     def on_release(self, key):
         if key == Key.esc:
